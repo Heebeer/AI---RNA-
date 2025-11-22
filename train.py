@@ -7,7 +7,6 @@ from sklearn.metrics import confusion_matrix, classification_report
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-import itertools
 
 # ================================================================
 # CONFIGURAÇÕES
@@ -138,4 +137,3 @@ cm = confusion_matrix(y_true, y_pred)
 print("\nMatriz de confusão:\n", cm)
 print("\nRelatório de classificação:")
 print(classification_report(y_true, y_pred, target_names=class_names))
-

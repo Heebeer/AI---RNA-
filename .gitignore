@@ -1,0 +1,53 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual env
+venv/
+env/
+.venv/
+
+# Cache
+*.cache
+.cache/
+.ipynb_checkpoints/
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# --- TensorFlow / Keras ---
+# Pesos e modelos
+*.h5
+*.hdf5
+*.pb
+saved_model/
+models/
+checkpoints/
+
+# Logs de treino
+logs/
+tensorboard/
+
+# Dados
+dataset/
+datasets/
+*.tfrecord
+
+# Imagens de teste/output
+outputs/
+predictions/
+
+# Arquivos grandes
+*.zip
+*.rar
+*.7z
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
