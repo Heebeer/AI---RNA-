@@ -1,0 +1,52 @@
+{
+  "class_names": [
+    "fonte",
+    "hd",
+    "mb",
+    "processador",
+    "ssd"
+  ],
+  "class_indices": {
+    "fonte": 0,
+    "hd": 1,
+    "mb": 2,
+    "processador": 3,
+    "ssd": 4
+  },
+  "class_counts": {
+    "fonte": 37,
+    "hd": 30,
+    "mb": 35,
+    "processador": 31,
+    "ssd": 30
+  },
+  "confusion_analysis": {
+    "fonte": {
+      "avg_confidence": 0.9694004058837891,
+      "std_confidence": 0.05750618875026703,
+      "confusion_with": {}
+    },
+    "hd": {
+      "avg_confidence": 0.8811354041099548,
+      "std_confidence": 0.1640467345714569,
+      "confusion_with": {
+        "mb": 1
+      }
+    },
+    "mb": {
+      "avg_confidence": 0.9899282455444336,
+      "std_confidence": 0.02150256372988224,
+      "confusion_with": {}
+    },
+    "processador": {
+      "avg_confidence": 0.8456774353981018,
+      "std_confidence": 0.13468092679977417,
+      "confusion_with": {}
+    },
+    "ssd": {
+      "avg_confidence": 0.9664372801780701,
+      "std_confidence": 0.06594355404376984,
+      "confusion_with": {}
+    }
+  }
+}

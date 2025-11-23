@@ -1,5 +1,5 @@
 fonte
 hd
 mb
-ram
+processador
 ssd
