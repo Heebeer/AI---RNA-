@@ -164,10 +164,10 @@ model = Model(inputs=base_model.input, outputs=output)
 model.compile(
     optimizer=Adam(learning_rate=0.001),
     loss="categorical_crossentropy",
-    metrics=["accuracy", "precision", "recall"]
+    metrics=["accuracy"]  # Apenas accuracy, pois precision/recall são calculadas no relatório final
 )
 
-print("📋 Modelo compilado com métricas avançadas")
+print("📋 Modelo compilado com métricas básicas")
 
 # ================================================================
 # CALLBACKS
@@ -226,7 +226,7 @@ for layer in base_model.layers[:-30]:  # Últimas 30 camadas treináveis
 model.compile(
     optimizer=Adam(learning_rate=0.0001),
     loss="categorical_crossentropy",
-    metrics=["accuracy", "precision", "recall"]
+    metrics=["accuracy"]
 )
 
 print(f"🔧 Camadas treináveis: {sum([l.trainable for l in base_model.layers])}/{len(base_model.layers)}")
@@ -340,6 +340,8 @@ def convert_to_serializable(obj):
         return bool(obj)
     elif isinstance(obj, (np.ndarray,)):
         return obj.tolist()
+    elif isinstance(obj, set):  # Trata sets convertendo para lista
+        return list(obj)
     elif isinstance(obj, dict):
         return {key: convert_to_serializable(value) for key, value in obj.items()}
     elif isinstance(obj, list):
@@ -393,18 +395,10 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 
 plt.subplot(1, 3, 3)
-# Gráfico de precisão e recall
-if 'precision' in history2.history:
-    epochs_range = range(len(history2.history['precision']))
-    plt.plot(epochs_range, history2.history['precision'], label='Precision', linewidth=2)
-    plt.plot(epochs_range, history2.history['recall'], label='Recall', linewidth=2)
-    plt.plot(epochs_range, history2.history['val_precision'], label='Val Precision', linewidth=2, linestyle='--')
-    plt.plot(epochs_range, history2.history['val_recall'], label='Val Recall', linewidth=2, linestyle='--')
-    plt.title('Precisão e Recall (Fase 2)')
-    plt.xlabel('Época')
-    plt.ylabel('Métrica')
-    plt.legend()
-    plt.grid(True, alpha=0.3)
+plt.text(0.5, 0.5, 'Métricas de Precision/Recall\ncalculadas no relatório final\n(classification_report)', 
+         ha='center', va='center', fontsize=12, transform=plt.gca().transAxes)
+plt.title('Métricas Adicionais')
+plt.axis('off')
 
 plt.tight_layout()
 plt.savefig('model/evolucao_treinamento_atualizado.png', dpi=300, bbox_inches='tight')
