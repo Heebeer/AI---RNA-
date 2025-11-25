@@ -1,5 +1,0 @@
-fonte
-hd
-mb
-ram
-ssd
