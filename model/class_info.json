@@ -22,28 +22,30 @@
   },
   "confusion_analysis": {
     "fonte": {
-      "avg_confidence": 0.9762592911720276,
-      "std_confidence": 0.037553563714027405,
+      "avg_confidence": 0.9278620481491089,
+      "std_confidence": 0.10832446068525314,
       "confusion_with": {}
     },
     "hd": {
-      "avg_confidence": 0.9118159413337708,
-      "std_confidence": 0.1340145617723465,
-      "confusion_with": {}
+      "avg_confidence": 0.9205705523490906,
+      "std_confidence": 0.03450928255915642,
+      "confusion_with": {
+        "fonte": 1
+      }
     },
     "mb": {
-      "avg_confidence": 0.982933521270752,
-      "std_confidence": 0.03486601263284683,
+      "avg_confidence": 0.8815091848373413,
+      "std_confidence": 0.174709290266037,
       "confusion_with": {}
     },
     "processador": {
-      "avg_confidence": 0.9772409796714783,
-      "std_confidence": 0.02768518216907978,
+      "avg_confidence": 0.8212481141090393,
+      "std_confidence": 0.15140400826931,
       "confusion_with": {}
     },
     "ssd": {
-      "avg_confidence": 0.9072049260139465,
-      "std_confidence": 0.20576795935630798,
+      "avg_confidence": 0.9234879612922668,
+      "std_confidence": 0.05723472684621811,
       "confusion_with": {}
     }
   }

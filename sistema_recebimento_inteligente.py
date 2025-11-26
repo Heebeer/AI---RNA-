@@ -89,7 +89,7 @@ def carregar_configuracoes_dinamicas():
     return LOCALIZACOES, PRECOS, EMOJIS
 
 # ================================================================
-# SISTEMA DE RECEBIMENTO ATUALIZADO
+# SISTEMA DE RECEBIMENTO
 # ================================================================
 
 class SistemaRecebimentoAtualizado:
@@ -196,10 +196,10 @@ if 'lote_processado_atualizado' not in st.session_state:
 sistema = st.session_state.sistema_atualizado
 
 # ================================================================
-# INTERFACE STREAMLIT ATUALIZADA
+# INTERFACE STREAMLIT
 # ================================================================
 
-st.title("🏢 TechLog Solutions - Sistema Atualizado")
+st.title("🏢 TechLog Solutions")
 st.markdown(f"**🔧 Componentes: {', '.join([f'{sistema.EMOJIS[c]} {c.upper()}' for c in sistema.classes])}**")
 st.markdown("---")
 
@@ -360,7 +360,7 @@ with tab1:
 
 # ABA 2: MAPA DO ARMAZÉM ATUALIZADO
 with tab2:
-    st.header("🗺️ Mapa do Armazém - Sistema Atualizado")
+    st.header("🗺️ Mapa do Armazém")
     
     # Criar mapa visual
     fig = go.Figure()
@@ -407,7 +407,7 @@ with tab2:
 
 # ABA 3: DASHBOARD ATUALIZADO
 with tab3:
-    st.header("📊 Dashboard Gerencial - Sistema Atualizado")
+    st.header("📊 Dashboard Gerencial")
     
     col1, col2 = st.columns(2)
     
